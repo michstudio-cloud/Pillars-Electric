@@ -23,7 +23,13 @@ const App: React.FC = () => {
     <Router>
       <Header />
       {/* Main floating content container */}
-      <div className="max-w-7xl mx-auto my-8 bg-neutral-900 shadow-2xl rounded-5xl overflow-hidden min-h-[calc(100vh-16rem)]"> {/* Adjusted margin-top for header and margin-bottom for footer */}
+      {/* The calculation (100vh - header_height - footer_height - main_content_my) is approximated for general layout.
+          Header (h-20 + p-4 wrapper) = 5rem + 2rem = 7rem
+          Footer (py-12 + p-4 wrapper + mt-8 wrapper) = 6rem + 2rem + 2rem = 10rem
+          Main content container (my-8) = 2rem * 2 = 4rem
+          Total = 7rem + 10rem + 4rem = 21rem
+          So, min-h-[calc(100vh-21rem)] */}
+      <div className="max-w-7xl mx-auto my-8 bg-neutral-900 shadow-2xl rounded-5xl overflow-hidden min-h-[calc(100vh-21rem)]"> {/* Adjusted margin-top for header and margin-bottom for footer */}
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
