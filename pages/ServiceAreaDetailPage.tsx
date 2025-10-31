@@ -50,7 +50,7 @@ const ServiceAreaDetailPage: React.FC = () => {
 
         <div className="mt-20 text-center">
           {combinedCtas.map((cta, index) => (
-            <Button key={index} cta={cta} variant={index === 0 ? 'primary' : 'outline'} className="mx-3 my-3" /> {/* Adjusted margin */}
+            <Button key={index} cta={cta} variant={index === 0 ? 'primary' : 'outline'} className="mx-3 my-3" />
           ))}
         </div>
       </section>
