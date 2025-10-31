@@ -91,6 +91,7 @@ export const SERVICES_DATA: Service[] = [
       { text: `Call Dispatch ${DISPATCH_PHONE}`, isPhone: true, phone: DISPATCH_PHONE },
       { text: 'Request Service Online', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/197143924/Preview_Image.jpg', // Maintenance Engineers checking electricity
   },
   {
     id: 'power-distribution-switchgear-upgrades',
@@ -112,6 +113,7 @@ export const SERVICES_DATA: Service[] = [
     ctas: [
       { text: 'Request a Site Evaluation', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/342157077/Preview_Image.jpg', // Control Panels in Electrical station
   },
   {
     id: 'lighting-energy-retrofits',
@@ -133,6 +135,7 @@ export const SERVICES_DATA: Service[] = [
     ctas: [
       { text: 'Schedule an Energy Audit', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/383196924/Preview_Image.jpg', // Electricians Install Led Lamps on Entertainment Center Ceiling
   },
   {
     id: 'new-construction-tenant-build-outs',
@@ -154,6 +157,7 @@ export const SERVICES_DATA: Service[] = [
     ctas: [
       { text: 'Request a Bid', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/308112260/Preview_Image.jpg', // Architectural Detail of Metal Roofing on Commercial Construction
   },
   {
     id: 'preventive-maintenance-testing',
@@ -175,6 +179,7 @@ export const SERVICES_DATA: Service[] = [
     ctas: [
       { text: 'Set Up a Maintenance Plan', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/249009778/Preview_Image.jpg', // Maintenance Engineers checking electricity
   },
 ];
 
@@ -200,6 +205,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ctas: [
       { text: 'Request Warehouse Service', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/420718507/Preview_Image.jpg', // Warehouse interior Envato
   },
   {
     id: 'data-centers-technology',
@@ -221,6 +227,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ctas: [
       { text: 'Schedule Data Center Consultation', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/320150904/Preview_Video.mp4', // Data center video - Envato
   },
   {
     id: 'manufacturing-industrial',
@@ -242,6 +249,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ctas: [
       { text: 'Book Industrial Service', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/320150904/Preview_Video.mp4', // Manufacturing video - Envato
   },
   {
     id: 'multifamily-mixed-use',
@@ -263,6 +271,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ctas: [
       { text: 'Request Multifamily Quote', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/308112260/Preview_Image.jpg', // New construction apartment - Envato
   },
   {
     id: 'retail-commercial-property',
@@ -284,6 +293,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ctas: [
       { text: 'Get Retail Electrical Estimate', path: '/contact' },
     ],
+    imageUrl: 'https://cdn.envato.com/files/249009778/Preview_Image.jpg', // Commercial Building Envato
   },
 ];
 
@@ -329,7 +339,7 @@ export const SERVICE_AREAS_DATA: ServiceArea[] = [
     ctas: [
       { text: 'Get a Galveston Quote', path: '/contact' },
     ],
-    imageUrl: 'https://cdn.envato.com/files/320150904/Preview_Video.mp4', // Crew working in a large electrical room
+    imageUrl: 'https://images.unsplash.com/photo-1616086259074-98c4d29b1b7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80', // Galveston beach/port
   },
   {
     id: 'the-woodlands',
@@ -349,7 +359,7 @@ export const SERVICE_AREAS_DATA: ServiceArea[] = [
     ctas: [
       { text: 'Request Service in The Woodlands', path: '/contact' },
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1596700810356-32d80d285a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRoZSUyMHdvb2RsYW5kcyUyMHRleGFzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60', // The Woodlands cityscape
+    imageUrl: 'https://images.unsplash.com/photo-1596700810356-32d80d285a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRoZSUyMHdvb2RsYW5kcyUyMHRleGFzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1920&q=80', // The Woodlands cityscape
   },
   {
     id: 'katy',
@@ -389,7 +399,7 @@ export const SERVICE_AREAS_DATA: ServiceArea[] = [
     ctas: [
       { text: 'Request Sugar Land Quote', path: '/contact' },
     ],
-    imageUrl: 'https://cdn.envato.com/files/249009778/Preview_Image.jpg', // Commercial Building Envato
+    imageUrl: 'https://images.unsplash.com/photo-1601007802778-9e1e2d42d3b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80', // Sugar Land commercial area
   },
   {
     id: 'richmond',
@@ -409,7 +419,7 @@ export const SERVICE_AREAS_DATA: ServiceArea[] = [
     ctas: [
       { text: 'Book Richmond Service', path: '/contact' },
     ],
-    imageUrl: 'https://cdn.envato.com/files/249009778/Preview_Image.jpg', // Construction site Envato
+    imageUrl: 'https://images.unsplash.com/photo-1542378906-8b9f1e1a5e1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80', // Richmond construction site
   },
   {
     id: 'college-station-bryan',
@@ -428,7 +438,7 @@ export const SERVICE_AREAS_DATA: ServiceArea[] = [
     ctas: [
       { text: 'Request a Quote in College Station', path: '/contact' },
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1579547196627-c1d0f8d9f1b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbGxlZ2UlMjBzdGF0aW9uJTIwdGV4YXN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60', // College Station campus
+    imageUrl: 'https://images.unsplash.com/photo-1579547196627-c1d0f8d9f1b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbGxlZ2UlMjBzdGF0aW9uJTIwdGV4YXN8ZW58MHx8MHx8&auto=format&fit=crop&w=1920&q=80', // College Station campus
   },
   {
     id: 'beaumont',
@@ -448,7 +458,7 @@ export const SERVICE_AREAS_DATA: ServiceArea[] = [
     ctas: [
       { text: 'Get Beaumont Service Estimate', path: '/contact' },
     ],
-    imageUrl: 'https://cdn.envato.com/files/249009778/Preview_Image.jpg', // Industrial area Envato
+    imageUrl: 'https://images.unsplash.com/photo-1596700810356-32d80d285a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRoZSUyMHdvb2RsYW5kcyUyMHRleGFzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1920&q=80', // Beaumont industrial
   },
   {
     id: 'baytown',
@@ -456,19 +466,19 @@ export const SERVICE_AREAS_DATA: ServiceArea[] = [
     heroHeadline: 'Commercial Electricians in Baytown, TX',
     heroSubheadline: 'Industrial-grade service for petrochemical and manufacturing clients.',
     description: [
-      'With deep roots in construction, Pillars Electrical provides specialized electrical work for Baytown’s industrial facilities. We understand the demands of refineries, warehouses, and complex manufacturing environments.',
+      'Con profundas raíces en la construcción, Pillars Electrical ofrece trabajos eléctricos especializados para las instalaciones industriales de Baytown. Entendemos las demandas de las refinerías, almacenes y entornos de fabricación complejos.',
     ],
     servicesIncluded: [
-      'Hazardous-area wiring and compliance',
-      'Control panels and distribution systems',
-      'Lighting upgrades and retrofits',
-      'Emergency electrical repairs',
-      'Long-term maintenance programs',
+      'Cableado y cumplimiento para áreas peligrosas',
+      'Paneles de control y sistemas de distribución',
+      'Actualizaciones y adaptaciones de iluminación',
+      'Reparaciones eléctricas de emergencia',
+      'Programas de mantenimiento a largo plazo',
     ],
     ctas: [
       { text: 'Schedule Baytown Service', path: '/contact' },
     ],
-    imageUrl: 'https://cdn.envato.com/files/249009778/Preview_Image.jpg', // Industrial area Envato
+    imageUrl: 'https://images.unsplash.com/photo-1596700810356-32d80d285a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRoZSUyMHdvb2RsYW5kcyUyMHRleGFzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1920&q=80', // Baytown industrial
   },
   {
     id: 'port-arthur',
@@ -476,19 +486,19 @@ export const SERVICE_AREAS_DATA: ServiceArea[] = [
     heroHeadline: 'Commercial Electricians in Port Arthur, TX',
     heroSubheadline: 'Supporting Gulf Coast industry with reliable electrical work.',
     description: [
-      'Pillars Electrical provides electrical contracting for Port Arthur’s shipping, manufacturing, and logistics sectors. We specialize in heavy-load systems, emergency service, and facility upgrades that keep power consistent and safe.',
+      'Pillars Electrical ofrece servicios de contratación eléctrica para los sectores de transporte marítimo, fabricación y logística de Port Arthur. Nos especializamos en sistemas de carga pesada, servicio de emergencia y mejoras de instalaciones que mantienen la energía constante y segura.',
     ],
     servicesIncluded: [
-      'Industrial system upgrades',
-      'Switchgear and panel installation',
-      'Dock and yard lighting',
-      'Electrical inspections',
-      '24-hour emergency response',
+      'Actualizaciones de sistemas industriales',
+      'Instalación de cuadros de distribución y paneles',
+      'Iluminación de muelles y patios',
+      'Inspecciones eléctricas',
+      'Respuesta de emergencia 24 horas',
     ],
     ctas: [
       { text: 'Contact Port Arthur Crew', path: '/contact' },
     ],
-    imageUrl: 'https://cdn.envato.com/files/249009778/Preview_Image.jpg', // Industrial area Envato
+    imageUrl: 'https://images.unsplash.com/photo-1596700810356-32d80d285a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRoZSUyMHdvb2RsYW5kcyUyMHRleGFzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1920&q=80', // Port Arthur industrial
   },
 ];
 
@@ -798,8 +808,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const HOME_PAGE_CONTENT: HomePageContent = {
   hero: {
-    videoUrl: 'https://cdn.envato.com/files/320150904/Preview_Video.mp4', // Crew working in a large electrical room
-    videoPoster: 'https://cdn.envato.com/files/320150904/Preview_Image.jpg',
+    mainHeroBackground: 'https://cdn.envato.com/files/320150904/Preview_Video.mp4', // Crew working in a large electrical room
     headline: 'Powering Texas Business',
     subheadline: 'Commercial electrical crews, on call 24/7 across Houston and surrounding metros.',
     ctas: [

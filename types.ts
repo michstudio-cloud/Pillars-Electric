@@ -1,4 +1,5 @@
 
+
 export interface NavLink {
   name: string;
   path: string;
@@ -79,8 +80,10 @@ export interface Cta {
 
 export interface HomePageContent {
   hero: {
-    videoUrl: string;
-    videoPoster: string;
+    videoUrl?: string;
+    videoPoster?: string;
+    imageUrl?: string;
+    mainHeroBackground: string; // New: For dynamic hero background specific to Build.it style
     headline: string;
     subheadline: string;
     ctas: Cta[];

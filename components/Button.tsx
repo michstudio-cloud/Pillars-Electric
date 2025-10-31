@@ -10,7 +10,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ cta, className = '', variant = 'primary', disabled = false }) => {
-  const baseClasses = 'font-bold py-3.5 px-7 rounded-lg transition-all duration-300 ease-in-out whitespace-nowrap text-lg';
+  const baseClasses = 'font-bold py-4 px-8 rounded-full transition-all duration-300 ease-in-out whitespace-nowrap text-xl'; // Adjusted padding and text size
   let variantClasses = '';
 
   switch (variant) {

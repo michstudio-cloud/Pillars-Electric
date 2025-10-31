@@ -12,11 +12,11 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ headline, copy, align = '
 
   return (
     <div className={`max-w-5xl mx-auto ${textAlignClass} ${className}`}>
-      <h2 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-accent leading-tight tracking-tight mb-6">
+      <h2 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-accent leading-tight tracking-tight mb-16"> {/* Adjusted margin-bottom */}
         {headline}
       </h2>
       {copy && (
-        <div className="text-xl lg:text-2xl text-white space-y-4 leading-relaxed">
+        <div className="text-2xl lg:text-3xl text-white space-y-6 leading-relaxed"> {/* Adjusted font size and space-y */}
           {Array.isArray(copy) ? (
             copy.map((paragraph, index) => <p key={index}>{paragraph}</p>)
           ) : (

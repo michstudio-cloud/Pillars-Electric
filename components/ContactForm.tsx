@@ -44,10 +44,10 @@ const ContactForm: React.FC = () => {
   const submitCta: Cta = { text: isSubmitting ? 'Sending...' : 'Submit Request' };
 
   return (
-    <div className="bg-neutral-900 p-8 rounded-lg shadow-xl max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-8">
+    <div className="bg-neutral-800 p-10 rounded-4xl shadow-xl max-w-2xl mx-auto"> {/* Adjusted background, padding, rounded */}
+      <form onSubmit={handleSubmit} className="space-y-10"> {/* Adjusted space-y */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-white mb-2">Name</label>
+          <label htmlFor="name" className="block text-lg font-medium text-white mb-2">Name</label> {/* Adjusted font size */}
           <input
             type="text"
             id="name"
@@ -55,22 +55,22 @@ const ContactForm: React.FC = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full p-4 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-gold-accent focus:border-gold-accent"
+            className="w-full p-5 bg-gray-800 border border-gray-700 rounded-xl text-white focus:ring-gold-accent focus:border-gold-accent" // Adjusted padding, rounded
           />
         </div>
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-white mb-2">Company</label>
+          <label htmlFor="company" className="block text-lg font-medium text-white mb-2">Company</label> {/* Adjusted font size */}
           <input
             type="text"
             id="company"
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full p-4 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-gold-accent focus:border-gold-accent"
+            className="w-full p-5 bg-gray-800 border border-gray-700 rounded-xl text-white focus:ring-gold-accent focus:border-gold-accent" // Adjusted padding, rounded
           />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">Phone</label>
+          <label htmlFor="phone" className="block text-lg font-medium text-white mb-2">Phone</label> {/* Adjusted font size */}
           <input
             type="tel"
             id="phone"
@@ -78,11 +78,11 @@ const ContactForm: React.FC = () => {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="w-full p-4 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-gold-accent focus:border-gold-accent"
+            className="w-full p-5 bg-gray-800 border border-gray-700 rounded-xl text-white focus:ring-gold-accent focus:border-gold-accent" // Adjusted padding, rounded
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-white mb-2">Email</label>
+          <label htmlFor="email" className="block text-lg font-medium text-white mb-2">Email</label> {/* Adjusted font size */}
           <input
             type="email"
             id="email"
@@ -90,39 +90,39 @@ const ContactForm: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full p-4 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-gold-accent focus:border-gold-accent"
+            className="w-full p-5 bg-gray-800 border border-gray-700 rounded-xl text-white focus:ring-gold-accent focus:border-gold-accent" // Adjusted padding, rounded
           />
         </div>
         <div>
-          <label htmlFor="city" className="block text-sm font-medium text-white mb-2">City</label>
+          <label htmlFor="city" className="block text-lg font-medium text-white mb-2">City</label> {/* Adjusted font size */}
           <input
             type="text"
             id="city"
             name="city"
             value={formData.city}
             onChange={handleChange}
-            className="w-full p-4 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-gold-accent focus:border-gold-accent"
+            className="w-full p-5 bg-gray-800 border border-gray-700 rounded-xl text-white focus:ring-gold-accent focus:border-gold-accent" // Adjusted padding, rounded
           />
         </div>
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-white mb-2">Message</label>
+          <label htmlFor="message" className="block text-lg font-medium text-white mb-2">Message</label> {/* Adjusted font size */}
           <textarea
             id="message"
             name="message"
-            rows={5}
+            rows={6} // Increased rows
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full p-4 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-gold-accent focus:border-gold-accent"
+            className="w-full p-5 bg-gray-800 border border-gray-700 rounded-xl text-white focus:ring-gold-accent focus:border-gold-accent" // Adjusted padding, rounded
           ></textarea>
         </div>
         <Button cta={submitCta} className="w-full" disabled={isSubmitting} />
 
         {submitStatus === 'success' && (
-          <p className="mt-4 text-green-500 text-center font-semibold">Your request has been sent successfully!</p>
+          <p className="mt-4 text-green-500 text-center font-semibold text-lg">Your request has been sent successfully!</p> {/* Adjusted font size */}
         )}
         {submitStatus === 'error' && (
-          <p className="mt-4 text-red-500 text-center font-semibold">There was an error sending your request. Please try again.</p>
+          <p className="mt-4 text-red-500 text-center font-semibold text-lg">There was an error sending your request. Please try again.</p> {/* Adjusted font size */}
         )}
       </form>
     </div>

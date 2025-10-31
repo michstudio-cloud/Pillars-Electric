@@ -11,20 +11,8 @@ const IndustryDetailPage: React.FC = () => {
 
   // Helper to provide a relevant image based on industry ID
   const getIndustryImageUrl = (id: string) => {
-    switch (id) {
-      case 'warehouses-distribution':
-        return 'https://cdn.envato.com/files/420718507/Preview_Image.jpg'; // Warehouse Envato
-      case 'data-centers-technology':
-        return 'https://cdn.envato.com/files/249009778/Preview_Image.jpg'; // Data center Envato
-      case 'manufacturing-industrial':
-        return 'https://cdn.envato.com/files/249009778/Preview_Image.jpg'; // Manufacturing Envato
-      case 'multifamily-mixed-use':
-        return 'https://cdn.envato.com/files/249009778/Preview_Image.jpg'; // Apartment complex Envato
-      case 'retail-commercial-property':
-        return 'https://cdn.envato.com/files/249009778/Preview_Image.jpg'; // Retail interior Envato
-      default:
-        return `https://picsum.photos/1920/1080?random=${industry.id.length + 101}`; // Fallback random
-    }
+    const foundIndustry = INDUSTRIES_DATA.find(i => i.id === id);
+    return foundIndustry?.imageUrl || `https://picsum.photos/1920/1080?random=${id.length + 101}`;
   };
 
   if (!industry) {
@@ -36,25 +24,25 @@ const IndustryDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen pt-20"> {/* pt-20 to offset fixed header */}
+    <div className="min-h-screen">
       <Hero
         headline={industry.heroHeadline}
         subheadline={industry.heroSubheadline}
         imageUrl={getIndustryImageUrl(industry.id)}
-        className="h-[60vh] min-h-[550px]" // Standardized hero height
+        className="h-[70vh] min-h-[600px]" // Standardized hero height
       />
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
-        <div className="max-w-4xl mx-auto text-xl text-white space-y-8 leading-relaxed"> {/* Increased text size and spacing */}
+      <section className="py-24 px-8 bg-black">
+        <div className="max-w-4xl mx-auto bg-neutral-800 p-12 rounded-4xl shadow-xl text-xl text-white space-y-8 leading-relaxed"> {/* Adjusted background, padding, rounded, font size */}
           {industry.description.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
 
         {industry.capabilities && industry.capabilities.length > 0 && (
-          <div className="max-w-4xl mx-auto mt-16 p-10 bg-neutral-900 rounded-lg shadow-xl"> {/* Increased padding and margin-top */}
-            <h2 className="text-3xl font-bold text-gold-accent mb-6 text-center leading-tight">Our Capabilities</h2>
-            <ul className="list-disc list-inside text-xl text-white space-y-4 leading-relaxed"> {/* Increased text size and spacing */}
+          <div className="max-w-4xl mx-auto mt-16 p-12 bg-neutral-800 rounded-4xl shadow-xl"> {/* Adjusted padding and margin-top */}
+            <h2 className="text-3xl font-bold text-gold-accent mb-8 text-center leading-tight">Our Capabilities</h2> {/* Adjusted font size and margin-bottom */}
+            <ul className="list-disc list-inside text-xl text-white space-y-4 leading-relaxed"> {/* Adjusted font size and space-y */}
               {industry.capabilities.map((cap, index) => (
                 <li key={index}>{cap}</li>
               ))}
@@ -64,7 +52,7 @@ const IndustryDetailPage: React.FC = () => {
 
         <div className="mt-20 text-center">
           {industry.ctas.map((cta, index) => (
-            <Button key={index} cta={cta} variant="primary" className="mx-2 my-2" />
+            <Button key={index} cta={cta} variant="primary" className="mx-3 my-3" /> {/* Adjusted margin */}
           ))}
         </div>
       </section>

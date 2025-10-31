@@ -11,20 +11,8 @@ const ServiceDetailPage: React.FC = () => {
 
   // Helper to provide a relevant image based on service ID
   const getServiceImageUrl = (id: string) => {
-    switch (id) {
-      case 'emergency-electrical-repair':
-        return 'https://cdn.envato.com/files/320150904/Preview_Video.mp4'; // Crew working in a large electrical room
-      case 'power-distribution-switchgear-upgrades':
-        return 'https://cdn.envato.com/files/249009778/Preview_Image.jpg'; // Electrical Power Station at Sunset
-      case 'lighting-energy-retrofits':
-        return 'https://cdn.envato.com/files/249009778/Preview_Image.jpg'; // Electricians Install Led Lamps on Entertainment Center Ceiling
-      case 'new-construction-tenant-build-outs':
-        return 'https://cdn.envato.com/files/249009778/Preview_Image.jpg'; // Construction site
-      case 'preventive-maintenance-testing':
-        return 'https://cdn.envato.com/files/249009778/Preview_Image.jpg'; // Maintenance Engineers checking electricity
-      default:
-        return `https://picsum.photos/1920/1080?random=${service.id.length + 1}`; // Fallback random
-    }
+    const foundService = SERVICES_DATA.find(s => s.id === id);
+    return foundService?.imageUrl || `https://picsum.photos/1920/1080?random=${id.length + 1}`;
   };
 
   if (!service) {
@@ -36,25 +24,25 @@ const ServiceDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen pt-20"> {/* pt-20 to offset fixed header */}
+    <div className="min-h-screen">
       <Hero
         headline={service.heroHeadline}
         subheadline={service.heroSubheadline}
         imageUrl={getServiceImageUrl(service.id)}
-        className="h-[60vh] min-h-[550px]" // Standardized hero height
+        className="h-[70vh] min-h-[600px]" // Standardized hero height
       />
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
-        <div className="max-w-4xl mx-auto text-xl text-white space-y-8 leading-relaxed"> {/* Increased text size and spacing */}
+      <section className="py-24 px-8 bg-black">
+        <div className="max-w-4xl mx-auto bg-neutral-800 p-12 rounded-4xl shadow-xl text-xl text-white space-y-8 leading-relaxed"> {/* Adjusted background, padding, rounded, font size */}
           {service.description.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
 
         {service.commonCalls && service.commonCalls.length > 0 && (
-          <div className="max-w-4xl mx-auto mt-16 p-10 bg-neutral-900 rounded-lg shadow-xl"> {/* Increased padding and margin-top */}
-            <h2 className="text-3xl font-bold text-gold-accent mb-6 text-center leading-tight">Common Emergency Calls</h2>
-            <ul className="list-disc list-inside text-xl text-white space-y-4 leading-relaxed"> {/* Increased text size and spacing */}
+          <div className="max-w-4xl mx-auto mt-16 p-12 bg-neutral-800 rounded-4xl shadow-xl"> {/* Adjusted padding and margin-top */}
+            <h2 className="text-3xl font-bold text-gold-accent mb-8 text-center leading-tight">Common Emergency Calls</h2> {/* Adjusted font size and margin-bottom */}
+            <ul className="list-disc list-inside text-xl text-white space-y-4 leading-relaxed"> {/* Adjusted font size and space-y */}
               {service.commonCalls.map((call, index) => (
                 <li key={index}>{call}</li>
               ))}
@@ -63,9 +51,9 @@ const ServiceDetailPage: React.FC = () => {
         )}
 
         {service.capabilities && service.capabilities.length > 0 && (
-          <div className="max-w-4xl mx-auto mt-16 p-10 bg-neutral-900 rounded-lg shadow-xl"> {/* Increased padding and margin-top */}
-            <h2 className="text-3xl font-bold text-gold-accent mb-6 text-center leading-tight">Our Capabilities</h2>
-            <ul className="list-disc list-inside text-xl text-white space-y-4 leading-relaxed"> {/* Increased text size and spacing */}
+          <div className="max-w-4xl mx-auto mt-16 p-12 bg-neutral-800 rounded-4xl shadow-xl"> {/* Adjusted padding and margin-top */}
+            <h2 className="text-3xl font-bold text-gold-accent mb-8 text-center leading-tight">Our Capabilities</h2> {/* Adjusted font size and margin-bottom */}
+            <ul className="list-disc list-inside text-xl text-white space-y-4 leading-relaxed"> {/* Adjusted font size and space-y */}
               {service.capabilities.map((cap, index) => (
                 <li key={index}>{cap}</li>
               ))}
@@ -74,9 +62,9 @@ const ServiceDetailPage: React.FC = () => {
         )}
 
         {service.bullets && service.bullets.length > 0 && (
-          <div className="max-w-4xl mx-auto mt-16 p-10 bg-neutral-900 rounded-lg shadow-xl"> {/* Increased padding and margin-top */}
-            <h2 className="text-3xl font-bold text-gold-accent mb-6 text-center leading-tight">{service.title} Includes</h2>
-            <ul className="list-disc list-inside text-xl text-white space-y-4 leading-relaxed"> {/* Increased text size and spacing */}
+          <div className="max-w-4xl mx-auto mt-16 p-12 bg-neutral-800 rounded-4xl shadow-xl"> {/* Adjusted padding and margin-top */}
+            <h2 className="text-3xl font-bold text-gold-accent mb-8 text-center leading-tight">{service.title} Includes</h2> {/* Adjusted font size and margin-bottom */}
+            <ul className="list-disc list-inside text-xl text-white space-y-4 leading-relaxed"> {/* Adjusted font size and space-y */}
               {service.bullets.map((bullet, index) => (
                 <li key={index}>{bullet}</li>
               ))}
@@ -86,11 +74,11 @@ const ServiceDetailPage: React.FC = () => {
 
         <div className="mt-20 text-center">
           {service.ctas.map((cta, index) => (
-            <Button key={index} cta={cta} variant={index === 0 ? 'primary' : 'outline'} className="mx-2 my-2" />
+            <Button key={index} cta={cta} variant={index === 0 ? 'primary' : 'outline'} className="mx-3 my-3" /> {/* Adjusted margin */}
           ))}
         </div>
         {service.id === 'emergency-electrical-repair' && (
-          <p className="max-w-4xl mx-auto text-center text-gray-500 text-xl mt-10 italic leading-relaxed"> {/* Increased text size and margin-top */}
+          <p className="max-w-4xl mx-auto text-center text-gray-500 text-xl mt-12 italic leading-relaxed"> {/* Adjusted margin-top */}
             Every repair is handled with safety and precision. No shortcuts, no guesswork — just dependable power restoration done right.
           </p>
         )}
