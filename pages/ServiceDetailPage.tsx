@@ -28,6 +28,7 @@ const ServiceDetailPage: React.FC = () => {
       <Hero
         headline={service.heroHeadline}
         subheadline={service.heroSubheadline}
+        body={service.description}
         imageUrl={getServiceImageUrl(service.id)}
         className="h-[70vh] min-h-[600px]" // Standardized hero height
       />
@@ -74,7 +75,7 @@ const ServiceDetailPage: React.FC = () => {
 
         <div className="mt-20 text-center">
           {service.ctas.map((cta, index) => (
-            <Button key={index} cta={cta} variant={index === 0 ? 'primary' : 'outline'} className="mx-3 my-3" /> {/* Adjusted margin */}
+            <Button key={index} cta={cta} variant={index === 0 ? 'primary' : 'outline'} className="mx-3 my-3" />
           ))}
         </div>
         {service.id === 'emergency-electrical-repair' && (
